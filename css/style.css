@@ -1,0 +1,248 @@
+:root {
+    --yasil: #53d153;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: url('../assets/headerbg.jpg') center/cover;
+}
+nav { padding: 5px 30px; }
+menu li { padding: 0 10px;}
+menu li a {
+    font: bold 1em 'Proxima Nova';
+    color: #fff;
+    white-space: nowrap;
+}
+
+#search  { display: flex; }
+#search input, #search button  {
+    border: 1px solid transparent;
+    outline: none;
+    padding: 0 1em;
+    height: 27px;
+    background: #ffffffcc;
+}
+
+#search input { border-radius: 1em 0 0 1em }
+#search button  { border-radius: 0 1em 1em 0;}
+#search button img { height: 18px;}
+
+#title a {
+    display: inline-block;
+    font: 1.4em 'Proxima Nova';
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--yasil);
+    padding: 10px 30px;
+    border: 2px solid transparent;
+    border-radius: 26px;
+    transition: all .2s ease-in-out;
+}
+
+#title a:hover{
+    border: 2px solid var(--yasil);
+    background-color: #c8ff9c49;
+}
+menu, #search { flex: 1 1 40% }
+#search { justify-content: end; }
+
+#scroll { padding: 10px}
+#scroll a {
+    font: 1em 'Proxima Nova';
+    color: #111;
+    background: #ffffffb3;
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+}
+
+main section { 
+    padding: 40px 0;
+    text-align: center;
+}
+
+h1 {
+    font: 700 2em Montserrat;
+    color: #fff;
+}
+h2 {
+    font: 1.2em Montserrat;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #818181; 
+}
+h3 {
+    font: bold 1.5em 'Proxima Nova';
+    color: #818181;
+    padding: 24px 0;
+}
+h6 {
+    font: 1em 'Open Sans';
+    color: #b3b3b3;
+}
+
+hr { 
+    width: 43px;
+    height: 2px;
+    background: #818181;
+    border: none
+}
+
+.bgyasil h2 { color: #207b20; }
+.bgyasil h6 { color: #2b9b2b; }
+.bgyasil hr { background: #207b20; }
+
+.bgyasil { background: var(--yasil) }
+.bgag { background: #fff }
+.bgboz { background: #f1f1f1 }
+
+#art3 {
+    padding: 48px 0
+}
+#art3 article {
+    padding: 24px 15px
+}
+#art3 a {
+    display: inline-block;
+    font: bold 1em 'Proxima Nova';
+    color: #fff;
+    background: var(--yasil);
+    padding: 7px 20px;
+    border-radius: 1em;
+    margin: 20px 0 0 0
+}
+
+.iconfr { 
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    width: 140px;
+    height: 140px;
+    background: #e0f3e0;
+    border-radius: 27px;
+    margin: auto;
+}
+.iconfr i { 
+    margin: auto;
+    font-size: 4em;
+    color: var(--yasil);
+} 
+
+#btn3 { 
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+#btn3 button, .btnd {
+    font: 1em 'Proxima Nova';
+    color: #2b9b2b;
+    border: 1px solid #2b9b2b;
+    background: #fff;
+    padding: 5px 22px;
+}
+#btn3 button:first-child { border-radius:  1em 0 0  1em; }
+#btn3 button:last-child { border-radius:  0 1em 1em 0; }
+#btn3 button.active, #btn3 button:hover, .btnd {
+    background: #2b9b2b;
+    color: #fff
+}
+
+.btnd { 
+    display: inline-block;
+    border-radius:  1em;
+    margin: 50px 0 0 0
+}
+
+#gallery img { 
+    width: 100%;
+    padding: .5em 1em;
+}
+
+@media only screen and (min-width: 768px) {
+    nav { 
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 15px 10px;
+    }
+    menu { 
+        order: -1;
+        display: flex;
+    }
+    menu li a {
+        font: bold 1em 'Proxima Nova';
+        color: #fff;
+        white-space: nowrap;
+        position: relative; 
+    }
+    
+    menu li a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -3px;
+        left: 50%;
+        background-color: var(--yasil);
+        transition: all 0.3s ease-in-out;
+        transform: translateX(-50%);
+    }
+    
+    menu li a:hover::after {
+        width: 100%;
+    }
+    
+    h1 { font-size: 3.4em;}
+
+    #art3 { 
+        display: flex; 
+        justify-content: center;
+    }
+
+    #art3 article a {
+        border: 1px solid transparent;
+        transition: all .2s ease-in-out;
+    }
+    
+    #art3 article a:hover {
+        border: 1px solid var(--yasil);
+        background-color: transparent;
+        color: var(--yasil);    
+    }
+
+    #work a {
+        border: 1px solid transparent;
+        transition: all .2s ease-in-out;
+    }
+    #work a:hover {
+        border: 1px solid #fff;
+        background-color: transparent;
+        color: #fff;    
+    }
+
+    #art3 article { flex: 0 1 350px; }
+
+    #btn3 button {
+        transition: all .2s ease-in-out;   
+    }
+    #btn3 button:hover {
+        background: #2b9b2b;
+        color: #fff;
+    }
+    #gallery {
+        max-width: 940px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #gallery img {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+    }
+}
