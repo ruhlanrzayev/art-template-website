@@ -162,6 +162,114 @@ hr {
     padding: .5em 1em;
 }
 
+#testimonal-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.testimonal-text {
+    padding: 4em 1em;
+}
+.testimonal-text p:first-of-type {
+    font: 1em 'Open Sans';
+    color: #818181; 
+    width: 75%;
+    margin: auto;
+}
+
+.testimonal-text p:last-of-type {
+    font: 1em 'Proxima Nova';
+    display: inline-block;
+    vertical-align: middle;
+    color: #4c4c4c;
+    margin-left: 1em;
+}
+
+.testimonal-text p:last-of-type span {
+    display: block;
+    font: 1em 'Open Sans';
+    color: #818181;
+}
+
+.testimonal-text a {
+    display: inline-block; 
+    border: 2px solid #b4b4b4;
+    padding: 1em;
+    border-radius: 2em;
+    margin: 2em 0 0 0;
+}
+
+
+#client h6 {
+    margin-bottom: 2em;
+}
+
+#gallery-row img {
+    width: 100%;
+    height: 100px;
+    filter: grayscale(100%);
+    object-fit: contain;
+    margin: 1em;
+    padding: 10px;
+}
+
+#cards .card {
+    padding: 1em;
+    flex: 0 1 300px;
+    margin: 1em;
+    text-align: center;
+    overflow: hidden;
+}
+
+#cards .card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+#cards .card p {
+    font: 1em 'Proxima Nova';
+    color: #fff;
+    margin: 1em 0;
+}
+
+#cards hr {
+    width: 100px;
+    height: 3px;
+}
+
+#cards .social {
+    background-color: rgba(255, 255, 255, 0.621);
+    border-radius: 1em;
+    width: 100px;
+    margin: auto;
+}
+
+#cards .social a {
+    display: inline-block;
+    padding: .5em;
+    color: green;  
+}
+#workwithus {
+    padding: 2em 0;
+    text-align: center;
+    background-color: #30b134;
+}
+#workwithus a {
+    background: var(--yasil);
+    color: #fff;
+    padding: 1em 2em;
+    border-radius: 1.5em; 
+    text-transform: uppercase;
+    transition: all .2s ease-in-out;
+    border: 2px solid transparent;
+}
+
 @media only screen and (min-width: 768px) {
     nav { 
         display: flex;
@@ -244,5 +352,34 @@ hr {
         width: 160px;
         height: 160px;
         object-fit: cover;
+    }
+
+    #gallery-row img {
+        width: 180px;
+        height: 90px;
+        filter: grayscale(100%);
+        object-fit: contain;
+        margin: 1em;
+        padding: 10px;
+    }
+
+    #cards {
+        width: 1100px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #cards hr {
+        width: 3px;
+        height: 100px;
+    }
+
+    #workwithus a:hover {
+        border: 2px solid var(--yasil);
+        background: #ffffff00;
+        /* color: var(--yasil);  */
+        font-weight: bold;
     }
 }
